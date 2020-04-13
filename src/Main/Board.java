@@ -16,6 +16,23 @@ import Piece.Empty;
 public class Board {
 	public colors[][]boardColors;
 	public Piece[][]boardPieces;
+	public RookBlack rookBlack1;
+	public HorseBlack horseBlack1;
+	public BishopBlack bishopBlack1;
+	public QueenBlack queenBlack;
+	public KingBlack kingBlack;
+	public BishopBlack bishopBlack2;
+	public HorseBlack horseBlack2;
+	public RookBlack rookBlack2;
+	public RookWhite rookWhite1;
+	public HorseWhite horseWhite1;
+	public BishopWhite bishopWhite1;
+	public QueenWhite queenWhite;
+	public KingWhite kingWhite;
+	public BishopWhite bishopWhite2;
+	public HorseWhite horseWhite2;
+	public RookWhite rookWhite2;
+
 	public class colors{
 		String color;
 		public colors(String c) {
@@ -40,6 +57,7 @@ public class Board {
 				}
 			}
 		}
+		this.resetBoard();
 	}
 	public void updateBoardColors() {
 		for (int i=0;i<boardColors.length;i++) {
@@ -74,52 +92,74 @@ public class Board {
 		for(int count=0;count<16;count++) {
 			switch(count) {
 			case 0:
-				boardPieces[0][count]=new RookBlack(0,count);
+				rookBlack1=new RookBlack(0,count);
+				boardPieces[0][count]=rookBlack1;
+
 				break; 
 			case 1:
-				boardPieces[0][count]=new HorseBlack(0,count);
+				horseBlack1=new HorseBlack(0,count);
+				boardPieces[0][count]=horseBlack1;
+
 				break;
 			case 2:
-				boardPieces[0][count]=new BishopBlack(0,count);
+				bishopBlack1=new BishopBlack(0,count);
+				boardPieces[0][count]=bishopBlack1;
+
 				break;
 			case 3:
-				boardPieces[0][count]=new QueenBlack(0,count);
+				queenBlack=new QueenBlack(0,count);
+				boardPieces[0][count]=queenBlack;
+
 				break;
 			case 4:
-				boardPieces[0][count]=new KingBlack(0,count);
+				kingBlack=new KingBlack(0,count);
+				boardPieces[0][count]=kingBlack;
+
 				break;
 			case 5:
-				boardPieces[0][count]=new BishopBlack(0,count);
+				bishopBlack2=new BishopBlack(0,count);
+				boardPieces[0][count]=bishopBlack2;
+
 				break;
 			case 6:
-				boardPieces[0][count]=new HorseBlack(0,count);
+				horseBlack2=new HorseBlack(0,count);
+				boardPieces[0][count]=horseBlack2;
 				break;
 			case 7:
-				boardPieces[0][count]=new RookBlack(0,count);
+				rookBlack2=new RookBlack(0,count);
+				boardPieces[0][count]=rookBlack2;
 				break;
 			case 8:
-				boardPieces[7][count-8]=new RookWhite(7,count-8);
+				rookWhite1=new RookWhite(7,count-8);
+				boardPieces[7][count-8]=rookWhite1;
 				break;
 			case 9:
-				boardPieces[7][count-8]=new HorseWhite(7,count-8);
+				horseWhite1=new HorseWhite(7,count-8);
+				boardPieces[7][count-8]=horseWhite1;
 				break;
 			case 10:
-				boardPieces[7][count-8]=new BishopWhite(7,count-8);
+				bishopWhite1=new BishopWhite(7,count-8);
+				boardPieces[7][count-8]=bishopWhite1;
 				break;
 			case 11:
-				boardPieces[7][count-8]=new QueenWhite(7,count-8);
+				queenWhite=new QueenWhite(7,count-8);
+				boardPieces[7][count-8]=queenWhite;
 				break;
 			case 12:
-				boardPieces[7][count-8]=new KingWhite(7,count-8);
+				kingWhite=new KingWhite(7,count-8);
+				boardPieces[7][count-8]=kingWhite;
 				break;
 			case 13:
-				boardPieces[7][count-8]=new BishopWhite(7,count-8);
+				bishopWhite2=new BishopWhite(7,count-8);
+				boardPieces[7][count-8]=bishopWhite2;
 				break;
 			case 14:
-				boardPieces[7][count-8]=new HorseWhite(7,count-8);
+				horseWhite2=new HorseWhite(7,count-8);
+				boardPieces[7][count-8]=horseWhite2;
 				break;
 			case 15:
-				boardPieces[7][count-8]=new RookWhite(7,count-8);
+				rookWhite2=new RookWhite(7,count-8);
+				boardPieces[7][count-8]=rookWhite2;
 				break;
 			}
 		}

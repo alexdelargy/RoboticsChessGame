@@ -13,7 +13,11 @@ public class KingWhite extends Piece{
 	public boolean validMove(int xInit, int yInit, int xFinal, int yFinal, boolean captureMove) {
 		// TODO Auto-generated method stub
 		double magnitudeMove=Math.sqrt(Math.pow((xFinal-xInit), 2)+Math.pow((yFinal-yInit), 2));
-		if ((magnitudeMove==1)||(magnitudeMove==Math.sqrt(2)))return true;
+		if ((magnitudeMove==1)||(magnitudeMove==Math.sqrt(2))) {
+			locX=xFinal;
+			locY=yFinal;
+			return true;
+		}
 		else return false;
 		
 	}

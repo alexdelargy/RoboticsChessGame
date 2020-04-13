@@ -8,4 +8,5 @@ public abstract class Piece {
 		return type;
 	}
 	public abstract boolean validMove(int xInit,int yInit, int xFinal, int yFinal, boolean captureMove);
+	
 }

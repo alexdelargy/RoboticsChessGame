@@ -20,21 +20,21 @@ public class Move{
 		board.resetBoard();
 	}
 	public String kingWhite(int xInit,int yInit,int xFinal,int yFinal,boolean moveType) {
-		if(KingWhite.validMove(xInit,yInit,xFinal,yFinal,moveType)) {
+		if(board.kingWhite.validMove(xInit,yInit,xFinal,yFinal,moveType)) {
 			board.boardPieces[xFinal][xInit]=board.boardPieces[xInit][xFinal];
 			return "Valid Move";
 		}
 		else return "Invalid Move";
 	}
 	public String queen(int xInit,int yInit, int xFinal, int yFinal, boolean moveType) {
-		if(QueenWhite.validMove(xInit,yInit,xFinal,yFinal,moveType)) {
+		if(board.queenWhite.validMove(xInit,yInit,xFinal,yFinal,moveType)) {
 			board.boardPieces[xFinal][xInit]=board.boardPieces[xInit][xFinal];
 			return "Valid Move";
 		}
 		else return "Invalid Move";
 	}
 	public String bishop(int xInit,int yInit,int xFinal, int yFinal, boolean moveType) {
-		if(BishopWhite.validMove(xInit,yInit,xFinal,yFinal,moveType)) {
+		if(board.bishopWhite.validMove(xInit,yInit,xFinal,yFinal,moveType)) {
 			board.boardPieces[xFinal][xInit]=board.boardPieces[xInit][xFinal];
 			return "Valid Move";
 		}

@@ -16,5 +16,6 @@ public class HorseBlack extends Piece {
 		if(((Math.abs(xFinal-xInit))==2&&(Math.abs(yFinal-yInit)==1))||((Math.abs(xFinal-xInit))==2&&(Math.abs(yFinal-yInit)==1)))return true;
 		else return false;
 	}
+	
 
 }
