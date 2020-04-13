@@ -12,6 +12,7 @@ public class BishopBlack extends Piece{
 	@Override
 	public boolean validMove(int xInit, int yInit, int xFinal, int yFinal, boolean captureMove) {
 		if (Math.atan((Math.abs(xFinal-xInit))/(Math.abs(yFinal-yInit)))==(Math.PI/4))return true;
+		
 		else return false;
 	}
 }
